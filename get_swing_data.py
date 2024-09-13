@@ -4,7 +4,6 @@ from tqdm import tqdm
 import subprocess
 from pytubefix import YouTube
 from pytubefix.cli import on_progress
- 
 
 
 
@@ -34,7 +33,7 @@ def trim_videos(ffmpeg_commands_path):
     for command in tqdm(ffmpeg_commands[:1], desc='Trimming Videos'):
       command = command.strip()
       subprocess.call(command, shell=True)
-  
+
 def main(args):
   
 
