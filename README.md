@@ -36,3 +36,7 @@ For more info please see our [project website](https://von31.github.io/synNsync/
     ```
 
 3. Download slahmr output files from : https://drive.google.com/file/d/16XIl-C9pEbsEF6vE8RW_6F3os4doIgER/view?usp=sharing
+
+## License
+See [License](./LICENSE).
+
