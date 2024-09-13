@@ -25,6 +25,7 @@ For more info please see our [project website](https://von31.github.io/synNsync/
 
     ```
     pip install pytubefix
+    pip install gdown
     ```
 
 2. Run code to download and process the swing dance dataset

@@ -4,8 +4,8 @@ from tqdm import tqdm
 import subprocess
 from pytubefix import YouTube
 from pytubefix.cli import on_progress
-
-
+import gdown
+import zipfile
 
 def download_videos(video_links_path):
   
@@ -33,6 +33,22 @@ def trim_videos(ffmpeg_commands_path):
     for command in tqdm(ffmpeg_commands, desc='Trimming Videos'):
       command = command.strip()
       subprocess.call(command, shell=True)
+      
+      
+def download_slahmr_data(output_path):
+  os.makedirs(output_path, exist_ok=True)
+
+  file_url = f'https://drive.google.com/uc?export=download&id=16XIl-C9pEbsEF6vE8RW_6F3os4doIgER'
+  gdown.download(file_url, output_path, quiet=False)
+
+  zip_folder_name = "swing_data/slahmr.zip"
+  
+  with zipfile.ZipFile(zip_folder_name, 'r') as zip_ref:
+      zip_ref.extractall(output_path)  
+
+  os.remove(zip_folder_name)
+
+  
 
 def main(args):
   
@@ -46,6 +62,11 @@ def main(args):
     raise ValueError('Please provide the path to the ffmpeg commands')
   else:
     trim_videos(args.ffmpeg_commands_path)
+  
+  output_path = 'swing_data/'
+
+  download_slahmr_data(output_path)
+  print(f'Data Downloaded Successfully: swing_data/raw_data, swing_data/processed_data, swing_data/slahmr')
 
     
 
