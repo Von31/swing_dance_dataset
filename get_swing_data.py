@@ -15,7 +15,7 @@ def download_videos(video_links_path):
     raw_data_destination = 'swing_data/raw_data/'
     os.makedirs(raw_data_destination, exist_ok=True)
       
-    for video_name in tqdm(video_ids[:1], desc='Downloading Videos'):
+    for video_name in tqdm(video_ids, desc='Downloading Videos'):
       video_name = video_name.strip()
       video_url = f'https://www.youtube.com/watch?v={video_name}'
       vid_path = f"{video_name}.mp4"
@@ -30,7 +30,7 @@ def trim_videos(ffmpeg_commands_path):
     processed_data_destination = 'swing_data/processed_data/'
     os.makedirs(processed_data_destination, exist_ok=True)
     
-    for command in tqdm(ffmpeg_commands[:1], desc='Trimming Videos'):
+    for command in tqdm(ffmpeg_commands, desc='Trimming Videos'):
       command = command.strip()
       subprocess.call(command, shell=True)
 
