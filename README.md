@@ -1,4 +1,5 @@
-# Swing Dance Dataset
+# Swing Dance Dataset 
+For more info please see our [project website](https://von31.github.io/synNsync/)
 
 ## Approach 1: Manual Set up
 
