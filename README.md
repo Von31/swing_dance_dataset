@@ -18,6 +18,8 @@ For more info please see our [project website](https://von31.github.io/synNsync/
 
 3. After the download, run the ffmpeg commands in the `ffmpeg_commands.txt` file to process the videos and save video into the `swing_data/processed_data/` folder
 
+4. Download slahmr output files from this [URL](https://drive.google.com/file/d/16XIl-C9pEbsEF6vE8RW_6F3os4doIgER/view?usp=sharing) and unzip into `swing_data/slahmr`
+
 
 ## Approach 2: Automatic Set up
 
@@ -34,8 +36,7 @@ For more info please see our [project website](https://von31.github.io/synNsync/
     python get_swing_data.py 
     ```
 
-## Download Swing Dance SLAHMR output:
-  - Download slahmr output files from this [URL](https://drive.google.com/file/d/16XIl-C9pEbsEF6vE8RW_6F3os4doIgER/view?usp=sharing) and unzip into `swing_data/slahmr`
+## Naming Convention of the Swing Dance SLAHMR output:
   - The naming convention of the files are : `swing_data/slahmr/dancing_<video_link>_<start_frame>_<end_frame>.npz`
 
 
